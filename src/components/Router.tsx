@@ -8,11 +8,13 @@ import ProductionDetailPage from '@/components/pages/ProductionDetailPage';
 import AboutPage from '@/components/pages/AboutPage';
 import ContactPage from '@/components/pages/ContactPage';
 import PressPage from '@/components/pages/PressPage';
+import WaterDropEffect from '@/components/WaterDropEffect';
 
 // Layout component that includes ScrollToTop
 function Layout() {
   return (
     <>
+      <WaterDropEffect />
       <ScrollToTop />
       <Outlet />
     </>

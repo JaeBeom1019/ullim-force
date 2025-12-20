@@ -181,8 +181,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="font-heading text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tighter mb-8"
             >
-              BEYOND <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">THE STAGE</span>
+              THE ULLIM <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">FORCE</span>
             </motion.h1>
           </div>
 
