@@ -135,15 +135,12 @@ export default function HomePage() {
           clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
       `}</style>
-
       {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"
         style={{ scaleX }}
       />
-
       <Header />
-
       {/* --- HERO SECTION --- */}
       <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
         {/* Background Parallax */}
@@ -182,7 +179,7 @@ export default function HomePage() {
               className="font-heading text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tighter mb-8"
             >
               BEYOND <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">THE STAGE</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">{"RESONANCE"}</span>
             </motion.h1>
           </div>
 
@@ -205,9 +202,7 @@ export default function HomePage() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
               className="text-gray-400 max-w-md font-paragraph leading-relaxed border-l border-gray-800 pl-6"
-            >
-              우리는 단순한 극단이 아닙니다. 전 세계적으로 울려 퍼지는 세계 수준의 연극 경험을 창작하는 프리미엄 제작사입니다.
-            </motion.p>
+            >{"우리의 작은 울림이 당신에게 깊은 떨림이 되도록, 찰나를 넘어 영원히 기억될 무대를 창작합니다."}</motion.p>
           </div>
         </div>
 
@@ -222,12 +217,10 @@ export default function HomePage() {
           <ChevronDown className="animate-bounce w-4 h-4" />
         </motion.div>
       </section>
-
       {/* --- MARQUEE SECTION --- */}
       <section className="bg-background border-y border-white/10 relative z-20">
         <Marquee text="창작 작품 • 글로벌 배포 • 창의적 우수성 • " />
       </section>
-
       {/* --- PHILOSOPHY / STICKY SECTION --- */}
       <section className="relative py-32 bg-background">
         <div className="max-w-[120rem] mx-auto px-6 lg:px-16">
@@ -299,7 +292,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- FEATURED PRODUCTIONS (Horizontal Scroll / Showcase) --- */}
       <section className="py-32 bg-[#050505] relative overflow-hidden">
         {/* Background Elements */}
@@ -383,7 +375,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- STATS / IMPACT SECTION --- */}
       <section className="py-24 bg-background border-t border-white/5">
         <div className="max-w-[120rem] mx-auto px-6 lg:px-16">
@@ -407,7 +398,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- CTA SECTION --- */}
       <section className="relative py-40 overflow-hidden">
         <div className="absolute inset-0">
@@ -443,7 +433,6 @@ export default function HomePage() {
           </AnimatedElement>
         </div>
       </section>
-
       <Footer />
     </div>
   );
