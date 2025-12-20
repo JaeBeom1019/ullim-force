@@ -199,7 +199,7 @@ export default function HomePage() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
               className="text-gray-400 max-w-md font-paragraph leading-relaxed border-l border-gray-800 pl-6"
-            >{"우리의 작은 울림이 당신에게 깊은 떨림이 되도록. 찰나를 넘어 영원히 기억될 무대를 창작합니다."}</motion.p>
+            >{"우리의 작은 울림이 당신에게 깊은 떨림이 되도록. <br /> 찰나를 넘어 영원히 기억될 무대를 창작합니다."}</motion.p>
           </div>
         </div>
 
@@ -227,9 +227,9 @@ export default function HomePage() {
               <div className="sticky top-32">
                 <AnimatedElement>
                   <h2 className="font-heading text-5xl md:text-7xl font-bold text-white mb-8 leading-none">
-                    더<br />
-                    <span className="text-primary">울림</span><br />
-                    포스
+                    THE<br />
+                    <span className="text-primary">ULLIM</span><br />
+                    FORCE
                   </h2>
                   <div className="w-24 h-1 bg-white/20 mb-8"></div>
                   <p className="text-xl text-gray-400 font-paragraph">
