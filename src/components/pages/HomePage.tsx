@@ -237,9 +237,9 @@ export default function HomePage() {
               <div className="sticky top-32">
                 <AnimatedElement>
                   <h2 className="font-heading text-5xl md:text-7xl font-bold text-white mb-8 leading-none">
-                    더<br />
-                    <span className="text-primary">울림</span><br />
-                    포스
+                    THE<br />
+                    <span className="text-primary">ULLIM</span><br />
+                    FORCE
                   </h2>
                   <div className="w-24 h-1 bg-white/20 mb-8"></div>
                   <p className="text-xl text-gray-400 font-paragraph">
