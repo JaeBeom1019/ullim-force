@@ -198,8 +198,10 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="text-gray-400 max-w-md font-paragraph leading-relaxed border-l border-gray-800 pl-6"
-            >{"우리의 작은 울림이 당신에게 깊은 떨림이 되도록. <br /> 찰나를 넘어 영원히 기억될 무대를 창작합니다."}</motion.p>
+              className="text-gray-400 max-w-md font-paragraph leading-relaxed border-l border-gray-800 pl-6 whitespace-pre-wrap"
+>
+  {`우리의 작은 울림이 당신에게 깊은 떨림이 되도록,
+찰나를 넘어 영원히 기억될 무대를 창작합니다.`}</motion.p>
           </div>
         </div>
 
