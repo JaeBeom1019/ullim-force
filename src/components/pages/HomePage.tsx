@@ -122,10 +122,10 @@ export default function HomePage() {
           100% { transform: translateX(0%); }
         }
         .animate-marquee {
-          animation: marquee 25s linear infinite;
+          animation: marquee 45s linear infinite;
         }
         .animate-marquee2 {
-          animation: marquee2 25s linear infinite;
+          animation: marquee2 45s linear infinite;
         }
         .text-stroke {
           -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
@@ -187,18 +187,18 @@ export default function HomePage() {
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center gap-8 overflow-hidden">
-            <motion.div
+            <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <Link to="/productions">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none px-10 py-8 text-lg font-medium tracking-wide transition-all hover:pl-12 group">
-                  EXPLORE PRODUCTIONS
+                  작품 보기
                   <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
-            </motion.div>
+            </motion.p>
             
             <motion.p 
               initial={{ opacity: 0 }}
@@ -206,7 +206,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="text-gray-400 max-w-md font-paragraph leading-relaxed border-l border-gray-800 pl-6"
             >
-              We are not just a troupe. We are a premier production house crafting world-class theatrical experiences that resonate globally.
+              우리는 단순한 극단이 아닙니다. 전 세계적으로 울려 퍼지는 세계 수준의 연극 경험을 창작하는 프리미엄 제작사입니다.
             </motion.p>
           </div>
         </div>
@@ -225,7 +225,7 @@ export default function HomePage() {
 
       {/* --- MARQUEE SECTION --- */}
       <section className="bg-background border-y border-white/10 relative z-20">
-        <Marquee text="ORIGINAL PRODUCTIONS • GLOBAL DISTRIBUTION • CREATIVE EXCELLENCE • " />
+        <Marquee text="창작 작품 • 글로벌 배포 • 창의적 우수성 • " />
       </section>
 
       {/* --- PHILOSOPHY / STICKY SECTION --- */}
@@ -237,13 +237,13 @@ export default function HomePage() {
               <div className="sticky top-32">
                 <AnimatedElement>
                   <h2 className="font-heading text-5xl md:text-7xl font-bold text-white mb-8 leading-none">
-                    THE <br />
-                    <span className="text-primary">ULLIM</span><br />
-                    FORCE
+                    더<br />
+                    <span className="text-primary">울림</span><br />
+                    포스
                   </h2>
                   <div className="w-24 h-1 bg-white/20 mb-8"></div>
                   <p className="text-xl text-gray-400 font-paragraph">
-                    Redefining the boundaries of live performance through technology, narrative, and scale.
+                    기술, 서사, 규모를 통해 라이브 공연의 경계를 재정의합니다.
                   </p>
                 </AnimatedElement>
               </div>
@@ -255,13 +255,13 @@ export default function HomePage() {
                 <div className="group relative aspect-video overflow-hidden mb-8 bg-dark-gray">
                   <Image 
                     src="https://static.wixstatic.com/media/87347d_085bb172fba34b0aa2b0a19c4a78bf91~mv2.png?originWidth=1280&originHeight=704" 
-                    alt="Production planning"
+                    alt="제작 계획"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
                   <div className="absolute bottom-8 left-8">
-                    <h3 className="text-3xl font-heading text-white mb-2">Production Excellence</h3>
-                    <p className="text-gray-300 max-w-lg">From script development to stage design, we manage every aspect of the creative lifecycle with precision.</p>
+                    <h3 className="text-3xl font-heading text-white mb-2">제작 우수성</h3>
+                    <p className="text-gray-300 max-w-lg">스크립트 개발부터 무대 디자인까지, 우리는 창의적 라이프사이클의 모든 측면을 정밀하게 관리합니다.</p>
                   </div>
                 </div>
               </AnimatedElement>
@@ -269,12 +269,12 @@ export default function HomePage() {
               <AnimatedElement delay={200}>
                 <div className="flex flex-col md:flex-row gap-12 items-center">
                   <div className="flex-1">
-                    <h3 className="text-4xl font-heading text-white mb-6">Global Storytelling</h3>
+                    <h3 className="text-4xl font-heading text-white mb-6">글로벌 스토리텔링</h3>
                     <p className="text-lg text-gray-400 leading-relaxed mb-6">
-                      Our narratives transcend borders. We create content that speaks to universal human emotions, packaged in visually stunning spectacles designed for international audiences.
+                      우리의 서사는 국경을 초월합니다. 우리는 보편적인 인간의 감정에 호소하는 콘텐츠를 만들고, 국제 관객을 위해 설계된 시각적으로 놀라운 스펙터클로 포장합니다.
                     </p>
                     <ul className="space-y-4">
-                      {['International Licensing', 'Original IP Creation', 'Cross-Cultural Adaptation'].map((item, i) => (
+                      {['국제 라이센싱', '오리지널 IP 창작', '문화 간 적응'].map((item, i) => (
                         <li key={i} className="flex items-center text-gray-300">
                           <div className="w-2 h-2 bg-primary mr-4"></div>
                           {item}
@@ -307,13 +307,13 @@ export default function HomePage() {
         
         <div className="max-w-[120rem] mx-auto px-6 lg:px-16 mb-20 flex justify-between items-end">
           <AnimatedElement>
-            <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Portfolio</span>
-            <h2 className="font-heading text-5xl md:text-6xl text-white">Featured Works</h2>
+            <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">포트폴리오</span>
+            <h2 className="font-heading text-5xl md:text-6xl text-white">주요 작품</h2>
           </AnimatedElement>
           <AnimatedElement delay={200}>
             <Link to="/productions">
               <Button variant="outline" className="hidden md:flex border-white/20 text-white hover:bg-white hover:text-black transition-colors rounded-none px-8 py-6">
-                View All Works
+                모든 작품 보기
               </Button>
             </Link>
           </AnimatedElement>
@@ -370,10 +370,10 @@ export default function HomePage() {
                       </Link>
                     </h3>
                     <p className="text-lg text-gray-400 mb-8 line-clamp-3 leading-relaxed">
-                      {performance.synopsis || "Experience a masterpiece of storytelling and visual grandeur. This production represents the pinnacle of our creative vision."}
+                      {performance.synopsis || "우리의 창의적 비전의 정점을 나타내는 스토리텔링과 시각적 웅장함의 걸작을 경험하세요."}
                     </p>
                     <Link to={`/productions/${performance._id}`} className="inline-flex items-center text-white font-medium hover:text-primary transition-colors group/link">
-                      <span className="border-b border-white/30 pb-1 group-hover/link:border-primary transition-colors">Discover Details</span>
+                      <span className="border-b border-white/30 pb-1 group-hover/link:border-primary transition-colors">세부 정보 확인</span>
                       <ArrowRight className="ml-2 w-4 h-4 transform group-hover/link:translate-x-1 transition-transform" />
                     </Link>
                   </div>
@@ -422,21 +422,21 @@ export default function HomePage() {
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <AnimatedElement>
             <h2 className="font-heading text-5xl md:text-7xl font-bold text-white mb-8">
-              Ready to Create <br />
-              <span className="text-stroke">Something Extraordinary?</span>
+              뭔가 특별한 것을 <br />
+              <span className="text-stroke">만들 준비가 되셨나요?</span>
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-              Whether you're looking to partner on a new production or bring our works to your venue, we're ready to collaborate.
+              새로운 제작에 파트너로 참여하고 싶거나 우리의 작품을 당신의 극장으로 가져오고 싶다면, 우리는 협력할 준비가 되어 있습니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link to="/contact">
                 <Button className="bg-primary hover:bg-primary/90 text-white px-10 py-8 text-lg rounded-none min-w-[200px]">
-                  Contact Us
+                  문의하기
                 </Button>
               </Link>
               <Link to="/about">
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black px-10 py-8 text-lg rounded-none min-w-[200px]">
-                  Our Story
+                  우리의 이야기
                 </Button>
               </Link>
             </div>

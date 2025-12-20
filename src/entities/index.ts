@@ -5,9 +5,9 @@
 
 /**
  * Collection ID: performances
- * Interface for 
+ * Interface for performances collection
  */
-export interface  {
+export interface Performance {
   _id: string;
   _createdDate?: Date;
   _updatedDate?: Date;
