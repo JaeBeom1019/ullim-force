@@ -153,10 +153,6 @@ export default function AboutPage() {
                 <p className="font-paragraph text-base text-light-gray/80 leading-relaxed mb-4 whitespace-pre-line">
                   {member.education}
                 </p>
-                {/* 학력 (본문 스타일) */}
-                <p className="font-paragraph text-base text-light-gray/80 leading-relaxed mb-4">
-                  {member.education}
-                </p>
                 {/* 상세 소개 (작은 텍스트) */}
                 <p className="font-paragraph text-sm text-light-gray/70 leading-relaxed">
                   {member.bio}
