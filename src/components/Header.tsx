@@ -22,7 +22,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <Image
-              src="https://static.wixstatic.com/media/87347d_c288e7f8852243518c785fa741df5d75~mv2.jpeg"
+              src="https://static.wixstatic.com/media/87347d_46ec1e34cadf49faa3e89a58e4971d3a~mv2.jpg"
               alt="UllimForce Logo"
               width={180}
               className="h-12 w-auto"

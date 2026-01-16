@@ -176,10 +176,11 @@ export default function HomePage() {
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="font-heading text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tighter mb-8"
+              className="font-heading text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] tracking-tight mb-8"
+              style={{ fontFamily: "'Impact', 'Arial Black', sans-serif" }}
             >
-              BEYOND <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">{"RESONANCE"}</span>
+              That's all we gonna do,<br />
+              <span className="text-primary text-6xl md:text-8xl lg:text-9xl">cinema!</span>
             </motion.h1>
           </div>
 
@@ -198,10 +199,10 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="text-gray-400 max-w-md font-paragraph leading-relaxed border-l border-gray-800 pl-6 whitespace-pre-wrap"
->
-  {`우리의 작은 울림이 당신에게 깊은 떨림이 되도록
-찰나를 넘어 영원히 기억될 무대를 창작합니다.`}</motion.p>
+              className="text-gray-300 max-w-2xl font-paragraph text-lg leading-relaxed border-l border-gray-800 pl-6"
+            >
+              우리의 작은 떨림이 당신에게 닿아 깊은 울림이 되도록, 찰나를 넘어 영원히 기억될 무대를 창작합니다.
+            </motion.p>
           </div>
         </div>
 
@@ -218,7 +219,7 @@ export default function HomePage() {
       </section>
       {/* --- MARQUEE SECTION --- */}
       <section className="bg-background border-y border-white/10 relative z-20">
-        <Marquee text="창작 작품 • 글로벌 배포 • 창의적 우수성 • " />
+        <Marquee text="The ullimforce Production 더 울림포스 • " />
       </section>
       {/* --- PHILOSOPHY / STICKY SECTION --- */}
       <section className="relative py-32 bg-background">
@@ -234,9 +235,15 @@ export default function HomePage() {
                     FORCE
                   </h2>
                   <div className="w-24 h-1 bg-white/20 mb-8"></div>
-                  <p className="text-xl text-gray-400 font-paragraph">
-                    기술, 서사, 규모를 통해 라이브 공연의 경계를 재정의합니다.
-                  </p>
+                  <div className="space-y-4 text-gray-400 font-paragraph">
+                    <p className="text-xl">기술, 서사, 규모를 통해 라이브 공연의 경계를 재정의 합니다</p>
+                    <ul className="space-y-2 text-lg">
+                      <li>• 한국 연극의 글로벌화</li>
+                      <li>• 한국 창작 작품 수출</li>
+                      <li>• 해외 작품 발굴 및 각본</li>
+                      <li>• 캐나다 '3 Exits' 팀과 영화 및 연극 협업</li>
+                    </ul>
+                  </div>
                 </AnimatedElement>
               </div>
             </div>
@@ -246,8 +253,8 @@ export default function HomePage() {
               <AnimatedElement delay={200}>
                 <div className="group relative aspect-video overflow-hidden mb-8 bg-dark-gray">
                   <Image 
-                    src="https://static.wixstatic.com/media/87347d_085bb172fba34b0aa2b0a19c4a78bf91~mv2.png?originWidth=1280&originHeight=704" 
-                    alt="제작 계획"
+                    src="https://static.wixstatic.com/media/87347d_642c2d4efae84050a7235c277a82a569~mv2.jpeg" 
+                    alt="제작 우수성"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
@@ -275,12 +282,11 @@ export default function HomePage() {
                     </ul>
                   </div>
                   <div className="flex-1 relative">
-                     {/* User provided logo used contextually here */}
-                    <div className="relative z-10 bg-dark-gray p-8 border border-white/10">
+                    <div className="relative z-10 bg-dark-gray overflow-hidden aspect-video">
                         <Image 
-                            src="https://static.wixstatic.com/media/87347d_c288e7f8852243518c785fa741df5d75~mv2.jpeg"
-                            alt="UllimForce Official Logo"
-                            className="w-full h-auto opacity-90"
+                            src="https://static.wixstatic.com/media/87347d_46ec1e34cadf49faa3e89a58e4971d3a~mv2.jpg"
+                            alt="글로벌 스토리텔링"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                     <div className="absolute -inset-4 border border-primary/30 z-0"></div>

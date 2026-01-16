@@ -177,10 +177,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-heading text-xl text-secondary mb-2">Email</h3>
                     <a
-                      href="mailto:info@ullimforce.com"
+                      href="mailto:theullimforce@gmail.com"
                       className="font-paragraph text-base text-light-gray/90 hover:text-primary transition-colors"
                     >
-                      info@ullimforce.com
+                      theullimforce@gmail.com
                     </a>
                   </div>
                 </div>
@@ -192,23 +192,45 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-heading text-xl text-secondary mb-2">Phone</h3>
                     <a
-                      href="tel:+82-2-1234-5678"
+                      href="tel:01085892537"
                       className="font-paragraph text-base text-light-gray/90 hover:text-primary transition-colors"
                     >
-                      +82-2-1234-5678
+                      010-8589-2537
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 flex items-center justify-center bg-primary/10 border border-primary/30 flex-shrink-0">
-                    <MapPin size={24} className="text-primary" />
+                    <Mail size={24} className="text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl text-secondary mb-2">Office</h3>
-                    <p className="font-paragraph text-base text-light-gray/90">
-                      Seoul, South Korea
-                    </p>
+                    <h3 className="font-heading text-xl text-secondary mb-2">Instagram</h3>
+                    <a
+                      href="https://www.instagram.com/theullimforce_official"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-paragraph text-base text-light-gray/90 hover:text-primary transition-colors"
+                    >
+                      @theullimforce_official
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 flex items-center justify-center bg-primary/10 border border-primary/30 flex-shrink-0">
+                    <Mail size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl text-secondary mb-2">YouTube</h3>
+                    <a
+                      href="https://www.youtube.com/channel/UCCAf4Z6HQa40qrNxwqi2xfg/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-paragraph text-base text-light-gray/90 hover:text-primary transition-colors"
+                    >
+                      The UllimForce Channel
+                    </a>
                   </div>
                 </div>
               </div>

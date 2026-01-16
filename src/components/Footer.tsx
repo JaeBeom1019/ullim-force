@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Youtube } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -52,26 +52,31 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <Mail size={20} className="text-primary mt-1 flex-shrink-0" />
                 <a
-                  href="mailto:info@ullimforce.com"
+                  href="mailto:theullimforce@gmail.com"
                   className="font-paragraph text-base text-light-gray/80 hover:text-primary transition-colors"
                 >
-                  info@ullimforce.com
+                  theullimforce@gmail.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
                 <Phone size={20} className="text-primary mt-1 flex-shrink-0" />
                 <a
-                  href="tel:+82-2-1234-5678"
+                  href="tel:01085892537"
                   className="font-paragraph text-base text-light-gray/80 hover:text-primary transition-colors"
                 >
-                  +82-2-1234-5678
+                  010-8589-2537
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
-                <p className="font-paragraph text-base text-light-gray/80">
-                  Seoul, South Korea
-                </p>
+                <Instagram size={20} className="text-primary mt-1 flex-shrink-0" />
+                <a
+                  href="https://www.instagram.com/theullimforce_official"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-paragraph text-base text-light-gray/80 hover:text-primary transition-colors"
+                >
+                  @theullimforce_official
+                </a>
               </div>
             </div>
           </div>
@@ -81,16 +86,14 @@ export default function Footer() {
             <h3 className="font-heading text-xl text-secondary mb-6">Follow Us</h3>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:theullimforce@gmail.com"
                 className="w-10 h-10 flex items-center justify-center border border-light-gray/20 hover:border-primary hover:bg-primary/10 transition-all"
-                aria-label="Facebook"
+                aria-label="Gmail"
               >
-                <Facebook size={20} className="text-secondary" />
+                <Mail size={20} className="text-secondary" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/theullimforce_official"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center border border-light-gray/20 hover:border-primary hover:bg-primary/10 transition-all"
@@ -99,7 +102,7 @@ export default function Footer() {
                 <Instagram size={20} className="text-secondary" />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/channel/UCCAf4Z6HQa40qrNxwqi2xfg/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center border border-light-gray/20 hover:border-primary hover:bg-primary/10 transition-all"

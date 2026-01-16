@@ -232,6 +232,23 @@ export default function AboutPage() {
                 SHOOK의 정식 라이센스 취득하여 더 울림포스의 연출가로 합류하였으며, 한국에서 공연되지 않은 해외 수상작을 찾아 직접 번역하여 공연을 올리고 있습니다.
               </p>
             </motion.div>
+
+            <motion.div
+              className="p-8 bg-background/50 border border-dark-gray/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <h3 className="font-heading text-2xl text-secondary mb-2">조재범</h3>
+              <p className="text-primary font-bold mb-4">PM</p>
+              <p className="font-paragraph text-base text-light-gray/80 leading-relaxed mb-4">
+                서울대학교 공과대학(졸업), 서울대학교 에너지시스템공학부 (재학)
+              </p>
+              <p className="font-paragraph text-sm text-light-gray/70 leading-relaxed">
+                극단의 살림을 맡아 기획부터 현장 운영까지 제작 과정의 전반을 두루 살피고 있습니다. 이성적인 판단이 필요한 실무의 영역을 도맡아 정리하며, 무대 위의 열정이 흔들리지 않고 온전히 관객에게 닿을 수 있도록 보이지 않는 곳에서 묵묵히 서포트합니다.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>

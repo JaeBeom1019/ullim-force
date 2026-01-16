@@ -5,9 +5,9 @@
 
 /**
  * Collection ID: performances
- * Interface for performances collection
+ * Interface for Performances
  */
-export interface Performance {
+export interface Performances {
   _id: string;
   _createdDate?: Date;
   _updatedDate?: Date;
@@ -15,7 +15,7 @@ export interface Performance {
   title?: string;
   /** @wixFieldType text */
   synopsis?: string;
-  /** @wixFieldType image */
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
   mainImage?: string;
   /** @wixFieldType text */
   genre?: string;
