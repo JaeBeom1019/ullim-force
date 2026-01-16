@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Image } from '@/components/ui/image';
+// Image 컴포넌트는 더 이상 쓰지 않으므로 import에서 제거해도 됩니다.
+// import { Image } from '@/components/ui/image'; 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Award, Target, Users, Zap } from 'lucide-react';
@@ -25,6 +26,28 @@ export default function AboutPage() {
       icon: Award,
       title: '영향력',
       description: '우리는 관객들에게 깊은 울림을 주고 지속적인 문화적 인상을 남기는 공연을 만듭니다.',
+    },
+  ];
+
+  // [수정 1] 새로운 멤버 데이터 배열 정의 (이미지 제거, 학력/소개 추가)
+  const teamMembers = [
+    {
+      name: '홍이빈',
+      role: '대표 / 극작 / 배우',
+      education: '안양예술고등학교 연극영화과(졸업), 서경대학교 뮤지컬과 (중퇴)',
+      bio: '더 울림포스의 대표로 극작과 배우를 겸하고 있으며, 빈센트 반 카오스의 초연 당시 연출도 겸했습니다. 이찬빈 연출의 PROJECT - ULLIM를 이어받아 정식 극단 The UllimForce로 창단하였습니다.',
+    },
+    {
+      name: '이찬빈',
+      role: '극작 / 연출',
+      education: 'Vancouver Film School (벤쿠버 필름 스쿨) 졸업',
+      bio: '어른왕자의 극작 / 연출가로 비공식 단체 [PROJECT - ULLIM]의 창립자. 현재는 벤쿠버 필름 스쿨을 졸업하고 영화감독을 준비하며 필름 스쿨 교내 조교로 활동을 이어나가고 있습니다.',
+    },
+    {
+      name: '남혁준',
+      role: '연출',
+      education: '중앙대학교 공연영상창작학부 연출전공 졸업',
+      bio: 'SHOOK의 정식 라이센스 취득하여 더 울림포스의 연출가로 합류하였으며, 한국에서 공연되지 않은 해외 수상작을 찾아 직접 번역하여 공연을 올리고 있습니다.',
     },
   ];
 
@@ -65,6 +88,7 @@ export default function AboutPage() {
           </motion.p>
         </div>
       </section>
+
       {/* Story Section */}
       <section className="py-16">
         <div className="max-w-[120rem] mx-auto px-6 lg:px-12">
@@ -78,11 +102,11 @@ export default function AboutPage() {
             <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed font-bold">{"극단 '더 울림포스'는 2022년 창작극 '어른 왕자'로 시작되어, 2025년 정식 출범한 종합 예술 프로덕션입니다. 우리는 배우, 연출, 극작 등 창작의 최전선부터 공학적 경영 지원에 이르기까지, 프로덕션의 A to Z를 아우르는 올인원(All-in-One) 시스템을 갖추고 있습니다. 예술가들의 뜨거운 직관이 현실적인 공학적 관리 시스템과 만나, 가장 효율적이면서도 완성도 높은 무대를 구현해냅니다."}</p>
             <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">{"이러한 탄탄한 제작 기반 위에서 우리는 인간 본성과 심리의 이면을 집요하게 탐구합니다. 대표작 '빈센트 반 카오스'가 조현병 환자의 시선을 통해 청년 소외 계층의 아픔을 판타지적 요소로 풀어냈듯, 우리는 인물의 복잡한 심리 변화를 역동적인 서사로 그려내는 데 주력합니다."}</p>
             <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">{"우리가 다루는 인간의 내면과 삶의 애환은 특정 문화를 넘어 전 세계 누구나 공감할 수 있는 보편적인 주제입니다. '더 울림포스'는 독창적인 스토리텔링과 안정적인 제작 역량을 바탕으로, 한국을 넘어 세계 관객에게 깊은 울림을 전하는 글로벌 극단으로 나아가겠습니다."}</p>
-
           </motion.div>
         </div>
       </section>
-      {/* Team Section */}
+
+      {/* [수정 2] Team Section: 이미지를 제거하고 텍스트 중심의 카드로 변경 */}
       <section className="py-24 bg-dark-gray/20">
         <div className="max-w-[120rem] mx-auto px-6 lg:px-12">
           <motion.div
@@ -93,55 +117,45 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-heading text-4xl md:text-5xl text-secondary mb-6">
-              우리 팀
+              극단 구성원
             </h2>
             <p className="font-paragraph text-lg text-light-gray/90 max-w-3xl mx-auto">
-              더 울림포스를 이끌어가는 창의적인 인재들을 만나보세요.
+              더 울림포스를 이끌어가는 창의적인 리더들
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: '홍이빈',
-                role: '극작가',
-                image: 'https://static.wixstatic.com/media/87347d_8066327a18c54c1bb62c4cb9137ab3fd~mv2.png?originWidth=384&originHeight=384',
-              },
-              {
-                name: '이찬빈',
-                role: '극작가',
-                image: 'https://static.wixstatic.com/media/87347d_82eb1312c07a4555917a06bfd3d1c610~mv2.png?originWidth=384&originHeight=384',
-              },
-              {
-                name: '남혁준',
-                role: '연출가',
-                image: 'https://static.wixstatic.com/media/87347d_b2f3b883dd694d3681f1a1d9d0e1ccec~mv2.png?originWidth=384&originHeight=384',
-              },
-            ].map((member, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
               <motion.div
                 key={member.name}
-                className="bg-background/50 border border-dark-gray/30 overflow-hidden hover:border-primary/30 transition-colors"
+                className="p-8 bg-background/50 border border-dark-gray/30 hover:border-primary/30 transition-colors"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="aspect-square relative overflow-hidden bg-dark-gray/40">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="font-heading text-2xl text-secondary mb-2">{member.name}</h3>
-                  <p className="font-paragraph text-base text-primary">{member.role}</p>
-                </div>
+                {/* 이름 */}
+                <h3 className="font-heading text-2xl text-secondary mb-2">
+                  {member.name}
+                </h3>
+                {/* 직책 (강조) */}
+                <p className="text-primary font-bold mb-4">
+                  {member.role}
+                </p>
+                {/* 학력 (본문 스타일) */}
+                <p className="font-paragraph text-base text-light-gray/80 leading-relaxed mb-4">
+                  {member.education}
+                </p>
+                {/* 상세 소개 (작은 텍스트) */}
+                <p className="font-paragraph text-sm text-light-gray/70 leading-relaxed">
+                  {member.bio}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
       {/* Values Section */}
       <section className="py-24">
         <div className="max-w-[120rem] mx-auto px-6 lg:px-12">
