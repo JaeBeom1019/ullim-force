@@ -31,7 +31,6 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-dark-gray/40 to-background" />
@@ -66,7 +65,6 @@ export default function AboutPage() {
           </motion.p>
         </div>
       </section>
-
       {/* Story Section */}
       <section className="py-16">
         <div className="max-w-[120rem] mx-auto px-6 lg:px-12">
@@ -76,25 +74,16 @@ export default function AboutPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-heading text-4xl md:text-5xl text-secondary mb-6">
-              우리의 이야기
-            </h2>
-            <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">
-              극단 '더 울림포스'는 2022년 8월 6일~7일 [PROJECT - ULLIM]의 이름으로 창작 작품 '어른 왕자'로 시작되어, 2025년 1월 17일에 [더 울림포스]의 이름으로 사업자 등록이 완료된 정식 극단입니다.
-            </p>
-            <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">
-              더 울림포스는 2025년까지 극단의 특성을 나타낼 수 있는 창작 작품으로 활동을 이어나가고 있습니다. 홍이빈 극작가와 이찬빈 극작가는 인간의 본성과 이면성에 관심을 가지고 극적인 상황 속 존재하는 인물의 다양한 심리 변화에 따른 역동적인 전개가 글의 특징입니다.
-            </p>
-            <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">
-              대표적으로 '빈센트 반 카오스'에서 자신을 빈센트 반 고흐라고 착각하는 조현병 환자 송준우라는 인물을 다루며, 청년소외계층의 빠져나올 수 없는 늪 같은 삶의 애환을 판타지적인 요소를 통해 역동적으로 표현해냈습니다.
-            </p>
+            <h2 className="font-heading text-4xl md:text-5xl text-secondary mb-6">{"체계적인 시스템 위에서 피어나는 역동적인 드라마"}</h2>
+            <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">{"극단 '더 울림포스'는 2022년 창작극 '어른 왕자'로 첫발을 내딛고, 2025년 정식 출범한 종합 예술 프로덕션입니다. 우리의 핵심 동력은 공학적 배경을 가진 구성원과 전문 예술가가 함께 구축한 '올인원(All-in-One) 시스템’ 정식 극단입니다. 극작, 연출, 연기는 물론 체계적인 기획과 경영 지원까지, 프로덕션의 전 과정을 자체적으로 소화하며 가장 효율적이고 완성도 높은 무대를 구현합니다."}</p>
+            <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">{"이러한 탄탄한 제작 기반 위에서 우리는 인간 본성과 심리의 이면을 집요하게 탐구합니다. 대표작 '빈센트 반 카오스'가 조현병 환자의 시선을 통해 청년 소외 계층의 아픔을 판타지적 요소로 풀어냈듯, 우리는 인물의 복잡한 심리 변화를 역동적인 서사로 그려내는 데 주력합니다."}</p>
+            <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">{"우리가 다루는 인간의 내면과 삶의 애환은 특정 문화를 넘어 전 세계 누구나 공감할 수 있는 보편적인 주제입니다. '더 울림포스'는 독창적인 스토리텔링과 안정적인 제작 역량을 바탕으로, 한국을 넘어 세계 관객에게 깊은 울림을 전하는 글로벌 극단으로 나아가겠습니다."}</p>
             <p className="font-paragraph text-lg text-light-gray/90 leading-relaxed">
               2025년 1월 17일 남혁준 연출가가 정식 라이센스를 취득하여 연출한 작품 'SHOOK(슉)'이 1월 17일 ~ 1월 19일 3일간 공연되었으며, 이는 더 울림포스가 창작 작품뿐만 아니라 해외 작품 발굴 및 각색을 통해 한국 연극의 글로벌화를 추구하는 새로운 방향을 제시합니다.
             </p>
           </motion.div>
         </div>
       </section>
-
       {/* Team Section */}
       <section className="py-24 bg-dark-gray/20">
         <div className="max-w-[120rem] mx-auto px-6 lg:px-12">
@@ -155,7 +144,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Values Section */}
       <section className="py-24">
         <div className="max-w-[120rem] mx-auto px-6 lg:px-12">
@@ -196,7 +184,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
