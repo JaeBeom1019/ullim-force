@@ -179,8 +179,8 @@ export default function HomePage() {
               className="font-heading text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] tracking-tight mb-8"
               style={{ fontFamily: "'Impact', 'Arial Black', sans-serif" }}
             >
-              That's all we gonna do,<br />
-              <span className="text-primary text-6xl md:text-8xl lg:text-9xl">cinema!</span>
+              That's all we gonna do<br />
+              <span className="text-primary text-6xl md:text-8xl lg:text-9xl" style={{ fontFamily: "'Brush Script MT', 'Comic Sans MS', cursive" }}>CINEMA!</span>
             </motion.h1>
           </div>
 
@@ -241,7 +241,6 @@ export default function HomePage() {
                       <li>• 한국 연극의 글로벌화</li>
                       <li>• 한국 창작 작품 수출</li>
                       <li>• 해외 작품 발굴 및 각본</li>
-                      <li>• 캐나다 '3 Exits' 팀과 영화 및 연극 협업</li>
                     </ul>
                   </div>
                 </AnimatedElement>
@@ -266,30 +265,19 @@ export default function HomePage() {
               </AnimatedElement>
 
               <AnimatedElement delay={200}>
-                <div className="flex flex-col md:flex-row gap-12 items-center">
-                  <div className="flex-1">
-                    <h3 className="text-4xl font-heading text-white mb-6">글로벌 스토리텔링</h3>
-                    <p className="text-lg text-gray-400 leading-relaxed mb-6">
-                      우리의 서사는 국경을 초월합니다. 우리는 보편적인 인간의 감정에 호소하는 콘텐츠를 만들고, 국제 관객을 위해 설계된 시각적으로 놀라운 스펙터클로 포장합니다.
-                    </p>
-                    <ul className="space-y-4">
-                      {['국제 라이센싱', '오리지널 IP 창작', '문화 간 적응'].map((item, i) => (
-                        <li key={i} className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-primary mr-4"></div>
-                          {item}
-                        </li>
-                      ))}
+                <div className="group relative aspect-video overflow-hidden mb-8 bg-dark-gray">
+                  <Image 
+                    src="https://static.wixstatic.com/media/87347d_46ec1e34cadf49faa3e89a58e4971d3a~mv2.jpg"
+                    alt="글로벌 스토리텔링"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
+                  <div className="absolute bottom-8 left-8">
+                    <h3 className="text-3xl font-heading text-white mb-2">글로벌 스토리텔링</h3>
+                    <p className="text-gray-300 max-w-lg">우리의 서사는 국경을 초월합니다. 우리는 보편적인 인간의 감정에 호소하는 콘텐츠를 만들고, 국제 관객을 위해 설계된 시각적으로 놀라운 스펙터클로 포장합니다.</p>
+                    <ul className="space-y-2 mt-4 text-gray-300">
+                      <li>• 캐나다 '3 Exits' 팀과 영화 및 연극 협업</li>
                     </ul>
-                  </div>
-                  <div className="flex-1 relative">
-                    <div className="relative z-10 bg-dark-gray overflow-hidden aspect-video">
-                        <Image 
-                            src="https://static.wixstatic.com/media/87347d_46ec1e34cadf49faa3e89a58e4971d3a~mv2.jpg"
-                            alt="글로벌 스토리텔링"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="absolute -inset-4 border border-primary/30 z-0"></div>
                   </div>
                 </div>
               </AnimatedElement>
@@ -375,29 +363,6 @@ export default function HomePage() {
                     </Link>
                   </div>
                 </div>
-              </AnimatedElement>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* --- STATS / IMPACT SECTION --- */}
-      <section className="py-24 bg-background border-t border-white/5">
-        <div className="max-w-[120rem] mx-auto px-6 lg:px-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-            {[
-              { label: "Productions", value: "25+", icon: Play },
-              { label: "Global Awards", value: "14", icon: Award },
-              { label: "Countries", value: "08", icon: Globe },
-              { label: "Audience Reach", value: "1M+", icon: Star },
-            ].map((stat, i) => (
-              <AnimatedElement key={i} delay={i * 100} className="text-center group">
-                <div className="mb-6 flex justify-center">
-                  <div className="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/10 transition-all duration-500">
-                    <stat.icon className="w-6 h-6 text-white group-hover:text-primary transition-colors" />
-                  </div>
-                </div>
-                <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-sm uppercase tracking-widest text-gray-500">{stat.label}</div>
               </AnimatedElement>
             ))}
           </div>

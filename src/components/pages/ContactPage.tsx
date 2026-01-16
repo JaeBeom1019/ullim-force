@@ -249,27 +249,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-16 bg-dark-gray/20">
-        <div className="max-w-[120rem] mx-auto px-6 lg:px-12">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-heading text-3xl text-secondary mb-6">Visit Our Office</h2>
-            <p className="font-paragraph text-lg text-light-gray/90 mb-8">
-              Located in the heart of Seoul, our office is open for scheduled visits and meetings.
-            </p>
-            <div className="aspect-video bg-dark-gray/40 flex items-center justify-center border border-light-gray/10">
-              <MapPin size={48} className="text-primary/40" />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );

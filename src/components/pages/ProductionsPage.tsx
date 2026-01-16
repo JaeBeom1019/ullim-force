@@ -31,10 +31,10 @@ export default function ProductionsPage() {
       setPerformances(items);
       setFilteredPerformances(items);
 
-      // Extract unique genres
+      // Extract unique genres and filter to only show 뮤지컬 and 연극
       const uniqueGenres = Array.from(
         new Set(items.map((p) => p.genre).filter((g): g is string => !!g))
-      );
+      ).filter(genre => genre === '뮤지컬' || genre === '연극');
       setGenres(uniqueGenres);
 
       // Extract unique years
