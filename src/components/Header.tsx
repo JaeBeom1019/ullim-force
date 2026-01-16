@@ -22,10 +22,11 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <Image
-              src="https://static.wixstatic.com/media/87347d_46ec1e34cadf49faa3e89a58e4971d3a~mv2.jpg"
+              src="https://static.wixstatic.com/media/87347d_ab87ab9d78004a3d829fb39af9a6c8a2~mv2.png"
               alt="UllimForce Logo"
               width={180}
-              className="h-12 w-auto"
+              className="h-12 w-auto brightness-0 invert"
+              style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(10000%) hue-rotate(0deg)' }}
             />
           </Link>
 

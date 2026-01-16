@@ -3,10 +3,10 @@ import { useParams, Link } from 'react-router-dom';
 import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { BaseCrudService } from '@/integrations';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Calendar, Clock, Film, Users, Video } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Film, Users, Video, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Performance {
   _id: string;
@@ -26,6 +26,30 @@ export default function ProductionDetailPage() {
   const { id } = useParams<{ id: string }>();
   const [performance, setPerformance] = useState<Performance | null>(null);
   const [loading, setLoading] = useState(true);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Gallery images for Vincent Van Chaos
+  const vincentGalleryImages = [
+    'https://static.wixstatic.com/media/87347d_84d6eeb665194dc7a191b67331bd0f68~mv2.jpg',
+    'https://static.wixstatic.com/media/87347d_1c49a83456a040f9969bd2dc729ffe52~mv2.jpg',
+    'https://static.wixstatic.com/media/87347d_d621f43a5c354737acdbe5443be674fa~mv2.jpg',
+    'https://static.wixstatic.com/media/87347d_b5216d43ec014cc1a7cfbdd59180aeeb~mv2.jpg',
+    'https://static.wixstatic.com/media/87347d_5af27eae8c8c4c4c82b082c19fb6521f~mv2.jpg',
+    'https://static.wixstatic.com/media/87347d_4c86651edbd143069819c8ce9d7c9f25~mv2.jpg',
+    'https://static.wixstatic.com/media/87347d_5af56382acc745a59f0c7b2f0853ac10~mv2.jpg',
+    'https://static.wixstatic.com/media/87347d_cf559a2497d647a6bd447bcc96787530~mv2.jpg',
+  ];
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 400;
+      const newScrollLeft = scrollContainerRef.current.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount);
+      scrollContainerRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   useEffect(() => {
     const fetchPerformance = async () => {
@@ -143,7 +167,42 @@ export default function ProductionDetailPage() {
                   {performance.synopsis || 'No synopsis available.'}
                 </p>
 
-                {performance.trailerUrl && (
+                {performance.title === '빈센트 반 카오스' ? (
+                  <div className="mb-8">
+                    <h3 className="font-heading text-2xl text-secondary mb-4">공연 사진</h3>
+                    <div className="relative group">
+                      <div 
+                        ref={scrollContainerRef}
+                        className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide pb-4"
+                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                      >
+                        {vincentGalleryImages.map((img, index) => (
+                          <div key={index} className="flex-shrink-0 w-[400px] h-[300px]">
+                            <Image
+                              src={img}
+                              alt={`빈센트 반 카오스 공연 사진 ${index + 1}`}
+                              className="w-full h-full object-cover rounded"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                      <button
+                        onClick={() => scroll('left')}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-secondary p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                        aria-label="Scroll left"
+                      >
+                        <ChevronLeft size={24} />
+                      </button>
+                      <button
+                        onClick={() => scroll('right')}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-secondary p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                        aria-label="Scroll right"
+                      >
+                        <ChevronRight size={24} />
+                      </button>
+                    </div>
+                  </div>
+                ) : performance.trailerUrl ? (
                   <div className="mb-8">
                     <h3 className="font-heading text-2xl text-secondary mb-4">Trailer</h3>
                     <a
@@ -156,7 +215,7 @@ export default function ProductionDetailPage() {
                       Watch Trailer
                     </a>
                   </div>
-                )}
+                ) : null}
               </motion.div>
             </div>
 
