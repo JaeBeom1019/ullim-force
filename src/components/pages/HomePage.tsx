@@ -97,7 +97,14 @@ export default function HomePage() {
     const fetchPerformances = async () => {
       try {
         const { items } = await BaseCrudService.getAll<Performance>('performances');
-        setFeaturedPerformances(items.slice(0, 3));
+        
+        // Filter to only show '어른왕자' and '빈센트 반 카오스'
+        const featuredTitles = ['어른왕자', '빈센트 반 카오스'];
+        const filteredItems = items.filter(item => 
+          featuredTitles.some(title => item.title?.includes(title))
+        );
+        
+        setFeaturedPerformances(filteredItems.slice(0, 2));
         setIsLoaded(true);
       } catch (error) {
         console.error("Failed to fetch performances", error);

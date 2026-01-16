@@ -73,8 +73,11 @@ export default function AboutPage() {
             <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">
               더 울림포스는 2025년까지 극단의 특성을 나타낼 수 있는 창작 작품으로 활동을 이어나가고 있습니다. 홍이빈 극작가와 이찬빈 극작가는 인간의 본성과 이면성에 관심을 가지고 극적인 상황 속 존재하는 인물의 다양한 심리 변화에 따른 역동적인 전개가 글의 특징입니다.
             </p>
-            <p className="font-paragraph text-lg text-light-gray/90 leading-relaxed">
+            <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">
               대표적으로 '빈센트 반 카오스'에서 자신을 빈센트 반 고흐라고 착각하는 조현병 환자 송준우라는 인물을 다루며, 청년소외계층의 빠져나올 수 없는 늪 같은 삶의 애환을 판타지적인 요소를 통해 역동적으로 표현해냈습니다.
+            </p>
+            <p className="font-paragraph text-lg text-light-gray/90 leading-relaxed">
+              2025년 1월 17일 남혁준 연출가가 정식 라이센스를 취득하여 연출한 작품 'SHOOK(슉)'이 1월 17일 ~ 1월 19일 3일간 공연되었으며, 이는 더 울림포스가 창작 작품뿐만 아니라 해외 작품 발굴 및 각색을 통해 한국 연극의 글로벌화를 추구하는 새로운 방향을 제시합니다.
             </p>
           </motion.div>
         </div>

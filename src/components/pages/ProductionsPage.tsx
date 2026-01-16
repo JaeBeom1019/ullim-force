@@ -28,18 +28,27 @@ export default function ProductionsPage() {
   useEffect(() => {
     const fetchPerformances = async () => {
       const { items } = await BaseCrudService.getAll<Performance>('performances');
-      setPerformances(items);
-      setFilteredPerformances(items);
+      
+      // Filter to only show specific 4 productions
+      const allowedTitles = ['어른왕자', '빈센트 반 카오스', '블러드 비즈니스', 'shook(슉)'];
+      const filtered = items.filter(item => 
+        allowedTitles.some(title => 
+          item.title?.toLowerCase().replace(/\s/g, '') === title.toLowerCase().replace(/\s/g, '')
+        )
+      );
+      
+      setPerformances(filtered);
+      setFilteredPerformances(filtered);
 
       // Extract unique genres and filter to only show 뮤지컬 and 연극
       const uniqueGenres = Array.from(
-        new Set(items.map((p) => p.genre).filter((g): g is string => !!g))
+        new Set(filtered.map((p) => p.genre).filter((g): g is string => !!g))
       ).filter(genre => genre === '뮤지컬' || genre === '연극');
       setGenres(uniqueGenres);
 
       // Extract unique years
       const uniqueYears = Array.from(
-        new Set(items.map((p) => p.productionYear).filter((y): y is number => !!y))
+        new Set(filtered.map((p) => p.productionYear).filter((y): y is number => !!y))
       ).sort((a, b) => b - a);
       setYears(uniqueYears);
     };
@@ -65,8 +74,7 @@ export default function ProductionsPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-gray/40 to-background" />
+      <section className="relative pt-32 pb-16 overflow-hidden bg-black">
         <div className="max-w-[120rem] mx-auto px-6 lg:px-12 relative z-10">
           <motion.h1
             className="font-heading text-5xl md:text-6xl lg:text-7xl text-secondary mb-6"
