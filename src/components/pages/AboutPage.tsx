@@ -75,7 +75,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-heading text-4xl md:text-5xl text-secondary mb-6">{"체계적인 시스템 위에서 피어나는 역동적인 드라마"}</h2>
-            <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">{"극단 '더 울림포스'는 2022년 창작극 '어른 왕자'로 시작되어, 2025년 정식 출범한 종합 예술 프로덕션입니다. 우리는 배우, 연출, 극작 등 창작의 최전선부터 공학적 경영 지원에 이르기까지, 프로덕션의 A to Z를 아우르는 **'올인원(All-in-One) 시스템'**을 갖추고 있습니다. 예술가들의 뜨거운 직관이 현실적인 공학적 관리 시스템과 만나, 가장 효율적이면서도 완성도 높은 무대를 구현해냅니다."}</p>
+            <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed font-bold">{"극단 '더 울림포스'는 2022년 창작극 '어른 왕자'로 시작되어, 2025년 정식 출범한 종합 예술 프로덕션입니다. 우리는 배우, 연출, 극작 등 창작의 최전선부터 공학적 경영 지원에 이르기까지, 프로덕션의 A to Z를 아우르는 올인원(All-in-One) 시스템을 갖추고 있습니다. 예술가들의 뜨거운 직관이 현실적인 공학적 관리 시스템과 만나, 가장 효율적이면서도 완성도 높은 무대를 구현해냅니다."}</p>
             <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">{"이러한 탄탄한 제작 기반 위에서 우리는 인간 본성과 심리의 이면을 집요하게 탐구합니다. 대표작 '빈센트 반 카오스'가 조현병 환자의 시선을 통해 청년 소외 계층의 아픔을 판타지적 요소로 풀어냈듯, 우리는 인물의 복잡한 심리 변화를 역동적인 서사로 그려내는 데 주력합니다."}</p>
             <p className="font-paragraph text-lg text-light-gray/90 mb-6 leading-relaxed">{"우리가 다루는 인간의 내면과 삶의 애환은 특정 문화를 넘어 전 세계 누구나 공감할 수 있는 보편적인 주제입니다. '더 울림포스'는 독창적인 스토리텔링과 안정적인 제작 역량을 바탕으로, 한국을 넘어 세계 관객에게 깊은 울림을 전하는 글로벌 극단으로 나아가겠습니다."}</p>
 
